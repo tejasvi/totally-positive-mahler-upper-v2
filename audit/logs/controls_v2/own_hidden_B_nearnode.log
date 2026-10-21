@@ -1,0 +1,11 @@
+certificate ../release_tpupper_audit/controls/v2_hidden/hidden_B_nearnode.json: 21 polynomials (21 weighted), 3485 nodes on [0.1125, 8.8125], X = 9, v = 544619200701/1000000000000
+s = 1.0000002003124977 (exact rational, 49 chars)
+(U1) sum b_j deg Q_j = 0.9396667013 < s = 1.0000002003: True
+moments: sum C = 0, sum C e = 0, sum C e^2 == 2s: True
+closed form U vs piecewise direct formula at 8 points: max |diff| <= 4.49e-30
+(U2) all 21 weighted: True; smallest int log|Q| dmu = 4.8871e-07 (Q_1)
+(V) (1/s) int log+ dmu = [0.544618506209484 +/- 4.58e-16]; claim v = 0.544619200701; margin 6.945e-07: True
+data errors: none; real-root brackets inside [e_0, e_N]: 161
+(U3) 15594 interval tests, coverage exact: True, failures: 1, max bisection depth 13, smallest certified lower bound 5.4038e-09 near x = 7.947617  [7s]
+   FAILED near (7.9625011, 'h(m) = [-2.5563e-8 +/- 2.26e-13] < 0')
+NOT VERIFIED [9s]

@@ -1,0 +1,15 @@
+OK  first interval: expected true, got true
+OK  first interval with its right end moved by 1/800: expected false, got false
+OK  first interval widened to the end of the tiling: expected false, got false
+OK  last interval, ending at 3526/400: expected true, got true
+OK  last interval, end point moved by 2^-64/400: expected false, got false
+OK  bound on the claim: expected true, got true
+OK  bound on the claim with v* lowered by 2e-9: expected false, got false
+OK  quadrature for Q_15: expected true, got true
+OK  quadrature with its first piece removed: expected false, got false
+OK  quadrature with the constant coefficient of Q_15 increased by 1: expected false, got false
+OK  (C2) for Q_2: expected true, got true
+OK  (C2) for Q_2 with its brackets moved off the roots: expected false, got false
+OK  irreducibility certificate of Q_2: expected true, got true
+OK  the certificate of Q_2 used for x^2 + 1: expected false, got false
+OK  (C1): expected true, got true

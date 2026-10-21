@@ -1,0 +1,14 @@
+certificate certificate_v1/cert_tp_up_f5d76932.json: 22 polynomials (22 weighted), 1742 nodes on [0.11, 8.815], X = 9, v = 21788198853/40000000000
+s = 1.0000000000000004 (exact rational, 43 chars)
+(U1) sum b_j deg Q_j = 0.9380113835 < s = 1.0000000000: True
+moments: sum C = 0, sum C e = 0, sum C e^2 == 2s: True
+closed form U vs piecewise direct formula at 8 points: max |diff| <= 1.50e-31
+(U2) all 22 weighted: True; smallest int log|Q| dmu = 1.0000e-07 (Q_12)
+(V) (1/s) int log+ dmu = [0.544704970325657 +/- 4.47e-16]; claim v = 0.544704971325; margin 9.993e-10: True
+data errors: none; real-root brackets inside [e_0, e_N]: 181
+(U3) 8559 interval tests, coverage exact: True, failures: 0, max bisection depth 6, smallest certified lower bound 2.6464e-08 near x = 1.967344  [3s]
+VERIFIED [5s]
+
+real	0m6.856s
+user	0m39.791s
+sys	0m0.462s

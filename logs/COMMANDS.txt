@@ -1,0 +1,5 @@
+check_up_c34e6e53.log was produced on a 96-thread server by checker/check_up_29783014.py (then saved as check_up.py) with 40
+worker processes, i.e.
+    python3 -I checker/check_up_29783014.py certificate/cert_tp_up_c34e6e53.json 40
+The log does not repeat the command. A rerun with 16 processes on another, shared server gave the same output, except for
+the run times, in 45 s. The logs in controls/ come from the same program, one run per modified certificate.

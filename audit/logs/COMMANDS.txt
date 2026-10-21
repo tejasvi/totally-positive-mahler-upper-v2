@@ -1,0 +1,17 @@
+# Commands that produced the logs in this directory. Working directory: a directory containing
+#   certificate_v2/cert_tp_up_c34e6e53.json, certificate_v1/cert_tp_up_f5d76932.json and
+#   controls_v2/ (the 17 controls and the narrow-dip certificate of the v2 certificate release),
+# with this release directory at P=../release_tpupper_audit. PY = "python3 -I" (Python 3.12, python-flint 0.9.0,
+# mpmath 1.4.1); 16 processes on a shared machine.
+P=../release_tpupper_audit; L=$P/logs
+$PY $P/check_up_second.py certificate_v2/cert_tp_up_c34e6e53.json 16 > $L/check_second_v2.log
+$PY $P/check_up_second.py certificate_v1/cert_tp_up_f5d76932.json 16 > $L/check_second_v1.log
+for f in controls_v2/*.json; do $PY $P/check_up_second.py $f 16 > $L/controls_v2/$(basename $f .json).log; done
+$PY $P/find_contact_site.py certificate_v2/cert_tp_up_c34e6e53.json > $L/find_contact_site_v2.log
+$PY $P/find_node_site.py certificate_v2/cert_tp_up_c34e6e53.json > $L/find_node_site_v2.log
+$PY $P/make_hidden_dips.py certificate_v2/cert_tp_up_c34e6e53.json 4217 800 3140 $P/controls/v2_hidden > $L/make_hidden_dips_v2.log
+$PY $P/make_complex_poly_controls.py certificate_v2/cert_tp_up_c34e6e53.json 15 $P/controls/v2_complex_poly > $L/make_complex_poly_controls_v2.log
+for f in $P/controls/v2_hidden/*.json $P/controls/v2_complex_poly/*.json; do $PY $P/check_up_second.py $f 16 > $L/controls_v2/own_$(basename $f .json).log; done
+$PY $P/validate_minorant.py certificate_v2/cert_tp_up_c34e6e53.json 400 1 > $L/validate_minorant_v2.log
+$PY $P/complex_roots_check.py certificate_v2/cert_tp_up_c34e6e53.json > $L/complex_roots_check_v2.log
+# first checker on the own controls (logs/first_checker/): python3 -I check_up_29783014.py FILE 16

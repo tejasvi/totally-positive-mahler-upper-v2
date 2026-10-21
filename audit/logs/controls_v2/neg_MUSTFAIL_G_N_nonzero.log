@@ -1,0 +1,28 @@
+certificate controls_v2/neg_MUSTFAIL_G_N_nonzero.json: 21 polynomials (21 weighted), 3481 nodes on [0.1125, 8.8125], X = 9, v = 544618200701/1000000000000
+s = 1.0000000012499977 (exact rational, 49 chars)
+(U1) sum b_j deg Q_j = 0.9396667013 < s = 1.0000000012: True
+moments: sum C = 0, sum C e = -1/1000000, sum C e^2 == 2s: False
+closed form U vs piecewise direct formula at 8 points: max |diff| <= 8.85e-06
+(U2) FAILED for Q_0: [-1.026228832475465034842567939e-5 +/- 5.56e-33]
+(U2) FAILED for Q_1: [-8.14528215943807599608870952e-6 +/- 7.08e-33]
+(U2) FAILED for Q_2: [-1.453935210750744899343080180e-5 +/- 6.64e-33]
+(U2) FAILED for Q_3: [-2.76849160450939224477064616e-5 +/- 2.78e-32]
+(U2) FAILED for Q_4: [-2.64431825633263617782220894e-5 +/- 6.09e-32]
+(U2) FAILED for Q_5: [-1.98074063935024840409500524e-5 +/- 4.31e-32]
+(U2) FAILED for Q_6: [-2.09443230275886587207083810e-5 +/- 5.63e-32]
+(U2) FAILED for Q_7: [-4.04582912201805230309651321e-5 +/- 4.40e-32]
+(U2) FAILED for Q_8: [-5.45186101300325587531245420e-5 +/- 3.42e-32]
+(U2) FAILED for Q_9: [-5.40417924487847635344270276e-5 +/- 6.88e-32]
+(U2) FAILED for Q_10: [-2.66432228502773468120956637e-5 +/- 3.91e-32]
+(U2) FAILED for Q_11: [-2.75102329159850095347679180e-5 +/- 4.84e-32]
+(U2) FAILED for Q_12: [-5.43891239518057643061047985e-5 +/- 5.34e-32]
+(U2) FAILED for Q_14: [-9.49451703728454997777813210e-5 +/- 8.65e-32]
+(U2) FAILED for Q_16: [-0.0001093083493945019817146888503 +/- 6.22e-32]
+(U2) FAILED for Q_18: [-5.32173412201783908471909658e-5 +/- 5.48e-32]
+(U2) FAILED for Q_19: [-5.73164985198342051292748913e-5 +/- 3.54e-32]
+(U2) FAILED for Q_20: [-0.000220807684372758340717818917 +/- 2.40e-31]
+(U2) all 21 weighted: False; smallest int log|Q| dmu = -2.2081e-04 (Q_20)
+(V) (1/s) int log+ dmu = [0.544618201745713 +/- 6.76e-17]; claim v = 0.544618200701; margin -1.045e-09: False
+data errors: ['G_0 or G_N nonzero']; real-root brackets inside [e_0, e_N]: 161
+(U3) skipped: data or moment checks failed
+NOT VERIFIED [2s]

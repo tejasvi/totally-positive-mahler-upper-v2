@@ -1,0 +1,10 @@
+certificate controls_v2/neg_MUSTFAIL_reducible_weighted.json: 21 polynomials (21 weighted), 3481 nodes on [0.1125, 8.8125], X = 9, v = 544618200701/1000000000000
+s = 0.9999999999999977 (exact rational, 41 chars)
+(U1) sum b_j deg Q_j = 1.0248375632 < s = 1.0000000000: False
+moments: sum C = 0, sum C e = 0, sum C e^2 == 2s: True
+closed form U vs piecewise direct formula at 8 points: max |diff| <= 5.84e-31
+(U2) all 21 weighted: True; smallest int log|Q| dmu = 1.0000e-07 (Q_20)
+(V) (1/s) int log+ dmu = [0.544618199706390 +/- 6.39e-17]; claim v = 0.544618200701; margin 9.946e-10: True
+data errors: ['Q_1: reducible over Q: [(x + (-1), 2)]', 'Q_1: repeated root', 'Q_1: no sign change on root bracket']; real-root brackets inside [e_0, e_N]: 161
+(U3) skipped: data or moment checks failed
+NOT VERIFIED [2s]

@@ -1,0 +1,6 @@
+polys 21 (active 20), nodes 3481, support [0.1125, 8.8125], X = 9, s = 1.00000000, claim v = 0.5446182007
+(U1) sum b deg = 0.854496 < s = 1.000000  OK
+(U2) int log|Q_j| dmu > 0 for all 20 active Q_j; smallest 1.000e-07
+(V) (1/s) int log+ dmu = [0.5446181997063899362116402348761772275568525660358368 +/- 4.50e-53] <= v  OK
+CheckError: root window failed near 0.13835752785018907
+NOT VERIFIED

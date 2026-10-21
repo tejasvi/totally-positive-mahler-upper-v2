@@ -1,0 +1,30 @@
+certificate ../release_tpupper_audit/controls/v2_complex_poly/q17_drop.json: 20 polynomials (20 weighted), 3481 nodes on [0.1125, 8.8125], X = 9, v = 544618200701/1000000000000
+s = 0.9999999999999977 (exact rational, 41 chars)
+(U1) sum b_j deg Q_j = 0.9384914854 < s = 1.0000000000: True
+moments: sum C = 0, sum C e = 0, sum C e^2 == 2s: True
+closed form U vs piecewise direct formula at 8 points: max |diff| <= 5.84e-31
+(U2) all 20 weighted: True; smallest int log|Q| dmu = 1.0000e-07 (Q_19)
+(V) (1/s) int log+ dmu = [0.544618199706390 +/- 6.39e-17]; claim v = 0.544618200701; margin 9.946e-10: True
+data errors: none; real-root brackets inside [e_0, e_N]: 151
+(U3) 5146 interval tests, coverage exact: True, failures: 171, max bisection depth 6, smallest certified lower bound -5.7890e-04 near x = 0.692823  [7s]
+   FAILED near (0.11625, 'h(m) = [-0.00030514 +/- 2.12e-9] < 0')
+   FAILED near (0.11875, 'h(m) = [-0.00022986 +/- 4.83e-9] < 0')
+   FAILED near (0.12875, 'h(m) = [-0.00035905 +/- 4.80e-9] < 0')
+   FAILED near (0.13366170105499614, 'h(m) = [-0.00036570 +/- 4.56e-10] < 0')
+   FAILED near (0.13589714531657768, 'h(m) = [-0.00036510 +/- 2.01e-9] < 0')
+   FAILED near (0.1374558931645722, 'h(m) = [-0.00010313 +/- 1.83e-9] < 0')
+   FAILED near (0.13769253332542514, 'h(m) = [-0.00040784 +/- 2.88e-9] < 0')
+   FAILED near (0.13917876392509454, 'h(m) = [-0.00044888 +/- 3.60e-9] < 0')
+   FAILED near (0.14125, 'h(m) = [-0.00038718 +/- 3.87e-9] < 0')
+   FAILED near (0.14875, 'h(m) = [-0.00043822 +/- 2.23e-9] < 0')
+   FAILED near (0.15125, 'h(m) = [-0.00030028 +/- 2.28e-9] < 0')
+   FAILED near (0.16875, 'h(m) = [-0.00050980 +/- 2.39e-9] < 0')
+   FAILED near (0.17625, 'h(m) = [-0.00041074 +/- 3.83e-9] < 0')
+   FAILED near (0.1813087176528342, 'h(m) = [-3.4349e-5 +/- 3.60e-10] < 0')
+   FAILED near (0.18375, 'h(m) = [-0.00056208 +/- 8.80e-10] < 0')
+   FAILED near (0.18939366355133022, 'h(m) = [-0.00066718 +/- 3.25e-9] < 0')
+   FAILED near (0.19143230656635293, 'h(m) = [-0.00052249 +/- 3.72e-9] < 0')
+   FAILED near (0.19375, 'h(m) = [-0.00065110 +/- 1.21e-9] < 0')
+   FAILED near (0.20375, 'h(m) = [-0.00057567 +/- 1.73e-9] < 0')
+   FAILED near (0.20625, 'h(m) = [-0.00023185 +/- 4.12e-9] < 0')
+NOT VERIFIED [9s]

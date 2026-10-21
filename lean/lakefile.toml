@@ -1,0 +1,101 @@
+name = "LeanAux"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["AuxCore", "AuxCommon", "TPMahler"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+autoImplicit = false
+weak.linter.style.header = false
+
+# This file is the configuration of the development tree. It also declares libraries and executables whose sources are
+# not part of this subset (TPN, TPK and the executables); build the targets named in the README.
+#   TPUpper:  upper bound for the smallest limit point of the absolute Mahler measure of totally positive algebraic
+#             integers (track N: TUN, track K: TUK; checker TUCore).
+#   TPMahler, TPCore: definitions and checker arithmetic shared with the lower bound, imported by TPUpper and TUCore.
+# Toolchain leanprover/lean4:v4.35.0-rc3; Mathlib at tag v4.35.0-rc3 (commit c55e6e786f49, see lake-manifest.json).
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0-rc3"
+
+# Core-only computational checkers (no Mathlib), precompiled for native_decide; kernel shards import only these.
+[[lean_lib]]
+name = "AuxCore"
+precompileModules = true
+
+# Lower-bound checker (core Lean only), precompiled.
+[[lean_lib]]
+name = "TPCore"
+precompileModules = true
+
+# Checker of this certificate (core Lean only), precompiled.
+[[lean_lib]]
+name = "TUCore"
+precompileModules = true
+
+# Shared Mathlib side: definitions of the statements, soundness of the checkers.
+[[lean_lib]]
+name = "AuxCommon"
+globs = ["AuxCommon.+"]
+
+[[lean_lib]]
+name = "TPMahler"
+globs = ["TPMahler.+"]
+
+[[lean_lib]]
+name = "TPUpper"
+globs = ["TPUpper.+"]
+
+[[lean_exe]]
+name = "logbench"
+root = "Bench.LogBench"
+
+[[lean_exe]]
+name = "logkbench"
+root = "Bench.LogKBench"
+
+[[lean_exe]]
+name = "tprun"
+root = "Bench.TPRun"
+
+[[lean_exe]]
+name = "tpenergy"
+root = "Bench.TPEnergy"
+
+# Lower-bound computational shards, native track (native_decide).
+[[lean_lib]]
+name = "TPN"
+globs = ["TPN.+"]
+
+# Lower-bound computational shards, kernel track (decide +kernel; core Lean only).
+[[lean_lib]]
+name = "TPK"
+globs = ["TPK.+"]
+
+[[lean_exe]]
+name = "tpechunks"
+root = "Bench.TPEChunks"
+
+[[lean_exe]]
+name = "turun"
+root = "Bench.TURun"
+
+# Computational shards, native track (native_decide).
+[[lean_lib]]
+name = "TUN"
+globs = ["TUN.+"]
+
+[[lean_exe]]
+name = "tuc2"
+root = "Bench.TUC2"
+
+[[lean_exe]]
+name = "tuq"
+root = "Bench.TUQ"
+
+# Kernel track (decide +kernel).
+[[lean_lib]]
+name = "TUK"
+globs = ["TUK.+"]

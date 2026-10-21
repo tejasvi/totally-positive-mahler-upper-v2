@@ -1,0 +1,6 @@
+TPUpper.K.tpup_infinite vs TPUpper.tpup_infinite: types equal = true
+TPUpper.K.tpup_limit_point vs TPUpper.tpup_limit_point: types equal = true
+TPUpper.K.exp_v0_lt vs TPUpper.exp_v0_lt: types equal = true
+'TPUpper.K.tpup_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TPUpper.K.tpup_limit_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TPUpper.K.exp_v0_lt' depends on axioms: [propext, Classical.choice, Quot.sound]

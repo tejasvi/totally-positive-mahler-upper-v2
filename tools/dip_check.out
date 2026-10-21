@@ -1,0 +1,4 @@
+check grid: 1001 points in [8.253980, 8.273980]; smallest lower bound of h: 2.9782e-07 at x = 8.264000; all positive: True
+tent node x0 - w = 8.263989: h = [1.34254613627281961076779512770586871089139152e-7 +/- 5.16e-52]  (positive: True)
+tent node x0 = 8.263990: h = [4.474046692909643217931640718112545508723032e-9 +/- 2.18e-52]  (positive: True)
+tent node x0 + 3w = 8.263993: h = [1.58340859676773835538961938662133074290783119e-7 +/- 3.88e-52]  (positive: True)
